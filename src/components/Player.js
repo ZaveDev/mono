@@ -1,8 +1,13 @@
 export class Player {
   constructor(name, start) {
     this.name = name;
+
+    this.totalShield = 10;
     this.shield = 10;
+
+    this.totalHull = 10;
     this.hull = 10;
+
     this.cannon = 2;
     this.credits = 1500;
 
@@ -23,12 +28,12 @@ export class Player {
       switch (component) {
         case "shield":
           console.log(`shield total has been upgraded by ${amount}`);
-          this.shield += amount;
+          this.totalShield += amount;
 
           break;
         case "hull":
           console.log(`hull total has been upgraded by ${amount}`);
-          this.hull += amount;
+          this.totalHull += amount;
 
           break;
         case "cannon":
@@ -41,6 +46,10 @@ export class Player {
           break;
       }
     };
+    this.rechargeShields = function (amount) {
+      if (this.shield === this.totalShield) return 
+      
+    }
 
     this.downgrade = function (component, amount) {
       switch (component) {

@@ -1,5 +1,5 @@
 class Property {
-  constructor(propertyName, price, upgradeCost) {
+  constructor(propertyName, price, upgradeCost, rent) {
     this.propertyName = propertyName;
     this.price = price;
     this.level = 0;
@@ -33,7 +33,7 @@ class Property {
   }
 }
 
-const spots = [
+export const spots = [
   new Property("Ruins of New Madrid", 60, 50, 2),
   // "special",
   new Property("Balou Station Wreckage", 60, 50, 4),
